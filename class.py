@@ -37,7 +37,8 @@ attack(name, "2시", damage)
 # if tank1.siz == True:
 #     print("시즈모드변환{0}유닛".format(tank1.name))
 
-
+# 스타 크래프트
+'''
 class Unit:
     def __init__(self, name, hp, speed):
         self.name = name
@@ -204,3 +205,32 @@ for unit in attack_unit:
 for unit in attack_unit:
     unit.damaged(randint(5, 21))
 gameOver()
+'''
+# 퀴즈
+
+
+class House:
+    def __init__(self, location, houseType, dealType, price, completionYear):
+        self.location = location
+        self.houseType = houseType
+        self.dealType = dealType
+        self.price = price
+        self.completionYear = completionYear
+
+    def showDetail(self):
+        print("{0} {1} {2} {3} {4}"
+              .format(self.location, self.houseType, self.dealType, self.price, self.completionYear))
+
+
+houses = []
+house1 = House("강남", "아파트", "매매", "10억", "2010년")
+house2 = House("마포", "오피스텔", "전세", "5억", "2007년")
+house3 = House("송파", "빌라", "월세", "500/50", "2000년")
+houses.append(house1)
+houses.append(house2)
+houses.append(house3)
+
+print("총 {0}대의 매물이 있습니다.".format(len(houses)))
+
+for i in houses:
+    i.showDetail()
